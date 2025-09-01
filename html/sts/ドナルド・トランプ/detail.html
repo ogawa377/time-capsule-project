@@ -25,13 +25,13 @@
           <!-- JavaScriptで画像を挿入 -->
         </div>
       </section>
-      <button class="btn-back" onclick="goBack()">戻る</button>
+      <button class="btn-back bounce" onclick="goBack()">戻る</button>
     </main>
     <script>
       function goBack() {
         window.history.back();
       }
-      3;
+
       // 横スクロール画像の表示
       document.addEventListener("DOMContentLoaded", () => {
         const imageFolder = "../../../assets/images/user_icon/dnald/";
@@ -42,7 +42,7 @@
           const img = document.createElement("img");
           img.src = `${imageFolder}${fileName}`;
           img.alt = "ドナルド・トランプの画像";
-          img.classList.add("carousel-image");
+          img.classList.add("carousel-image", "hover-zoom");
           carouselContainer.appendChild(img);
         });
       });
