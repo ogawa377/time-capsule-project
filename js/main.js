@@ -253,11 +253,13 @@ document.addEventListener("DOMContentLoaded", function () {
   students.forEach((student) => {
     const studentCard = document.createElement("div");
     studentCard.classList.add("obj-card");
+    studentCard.style.backgroundImage = `url('${student.icon}')`;
     studentCard.innerHTML = `
-            <img src="${student.icon}" alt="${student.name}のアイコン" class="obj-icon">
-            <h3 class="obj-name">${student.name}</h3>
-            <p class="obj-comment">${student.comment}</p>
-        `;
+      <div class="card-content">
+        <h3 class="obj-name">${student.name}</h3>
+        <p class="obj-comment">${student.comment}</p>
+      </div>
+    `;
 
     studentCard.addEventListener("click", () => {
       // 各ユーザーのフォルダに遷移

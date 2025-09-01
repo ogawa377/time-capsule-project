@@ -85,7 +85,7 @@ main {
 /* 一言コメントのスタイル */
 .obj-comment {
   font-size: 0.9em;
-  color: #555;
+  color: white;
 }
 
 /* 詳細画面のスタイル */
@@ -135,7 +135,7 @@ main {
 
 .detail-comment {
   font-size: 1em;
-  color: #555;
+  color: #555555;
   margin: 0;
 }
 
