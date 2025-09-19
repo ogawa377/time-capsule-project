@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../css/styles.css" />
+    <link rel="stylesheet" href="../../../css/sts/dnald/styles.css" />
+    <title>タイムカプセル - ドナルド・トランプ</title>
+  </head>
+  <body>
+    <header class="detail-header">
+      <h1 class="detail-title animate-text">ドナルド・トランプの詳細画面</h1>
+    </header>
+    <main class="detail-main">
+      <section id="student-details" class="detail-container">
+        <h2 id="student-name" class="detail-name animate-text">
+          ドナルド・トランプ
+        </h2>
+        <p id="student-comment" class="detail-comment animate-text">
+          アメリカを取り戻す
+        </p>
+      </section>
+      <section class="image-carousel">
+        <div class="carousel-container" id="carousel-container">
+          <!-- JavaScriptで画像を挿入 -->
+        </div>
+      </section>
+      <button class="btn-back" onclick="goBack()">戻る</button>
+    </main>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+      3;
+      // 横スクロール画像の表示
+      document.addEventListener("DOMContentLoaded", () => {
+        const imageFolder = "../../../assets/images/user_icon/dnald/";
+        const imageFiles = ["ttanp1.jpeg", "tramp2.jpeg", "tramp3.jpeg"]; // 画像ファイル名をリスト化
+        const carouselContainer = document.getElementById("carousel-container");
+
+        imageFiles.forEach((fileName) => {
+          const img = document.createElement("img");
+          img.src = `${imageFolder}${fileName}`;
+          img.alt = "ドナルド・トランプの画像";
+          img.classList.add("carousel-image");
+          carouselContainer.appendChild(img);
+        });
+      });
+    </script>
+  </body>
+</html>

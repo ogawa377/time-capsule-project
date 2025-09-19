@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../css/styles.css" />
+    <title>{ユーザー名} - 詳細画面</title>
+  </head>
+  <body>
+    <header>
+      <h1>{ユーザー名}の詳細画面</h1>
+    </header>
+    <main>
+      <div id="student-details" class="detail-container">
+        <img
+          id="student-icon"
+          src="{アイコンパス}"
+          alt="{ユーザー名}のアイコン"
+        />
+        <h2 id="student-name">{ユーザー名}</h2>
+        <p id="student-comment">{コメント}</p>
+      </div>
+      <button onclick="goBack()">戻る</button>
+    </main>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+  </body>
+</html>

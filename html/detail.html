@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/styles.css" />
+    <title>タイムカプセル - 詳細画面</title>
+  </head>
+  <body>
+    <header>
+      <h1>タイムカプセル - 詳細画面</h1>
+    </header>
+    <main>
+      <div id="student-details" class="detail-container">
+        <img id="student-icon" src="" alt="学生のアイコン" />
+        <h2 id="student-name"></h2>
+        <p id="student-comment"></p>
+      </div>
+      <button onclick="goBack()">戻る</button>
+    </main>
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+    </script>
+    <script src="../js/detail.js"></script>
+  </body>
+</html>
