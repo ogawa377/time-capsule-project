@@ -271,7 +271,7 @@ document.addEventListener("DOMContentLoaded", function () {
     studentCard.addEventListener("click", () => {
       // 各ユーザーのフォルダに遷移
       const userFolder = encodeURIComponent(student.name.replace(/\s+/g, "_")); // スペース:アンダースコアに変換
-      window.location.href = `/html/sts/${userFolder}/detail.html`;
+      window.location.href = `sts/${userFolder}/detail.html`;
     });
 
     studentContainer.appendChild(studentCard);
