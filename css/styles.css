@@ -28,6 +28,10 @@ main {
   animation: gradientBackground 10s ease infinite;
 }
 
+#footer {
+  height: 20px;
+  text-align: center;
+}
 /* インデックス画面のスタイル */
 .index-container {
   display: flex;
