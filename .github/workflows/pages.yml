@@ -1,0 +1,33 @@
+name: Deploy GitHub Pages
+
+on:
+  # mainブランチにpushされたときに実行
+  push:
+    branches:
+      - main
+
+# ジョブのパーミッションを設定
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      # 1. リポジトリのコードをチェックアウト
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      # 2. 公開するフォルダを指定してアーティファクトとしてアップロード
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 'html' フォルダを公開対象とする
+          path: './html'
+
+      # 3. GitHub Pagesにデプロイ
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
