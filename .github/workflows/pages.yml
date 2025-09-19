@@ -24,8 +24,8 @@ jobs:
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          # 'html' フォルダを公開対象とする
-          path: './html'
+          # '' フォルダを公開対象とする
+          path: '.'
 
       # 3. GitHub Pagesにデプロイ
       - name: Deploy to GitHub Pages
