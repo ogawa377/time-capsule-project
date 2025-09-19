@@ -2,10 +2,11 @@
 
 /* 全体のスタイル設定 */
 body {
-  font-family: Arial, sans-serif;
+  font-family: 'Noto Sans JP', sans-serif;
   margin: 0;
   padding: 0;
-  background-color: #f4f4f4;
+  background-color: #f0f2f5;
+  color: #333;
 }
 
 /* メイン背景アニメーション */
@@ -30,147 +31,257 @@ main {
 /* インデックス画面のスタイル */
 .index-container {
   display: flex;
-  flex-wrap: wrap; /* このプロパティが折り返しを実現 */
+  flex-wrap: wrap;
   justify-content: center;
   padding: 20px;
 }
-/* トップ画面タイトル */
+
 #index-title {
   text-align: center;
   margin: 20px 0;
-  font-size: 2em;
-  overflow: hidden; /* アニメーション中の文字がはみ出さないようにする */
+  font-size: 2.5em;
+  font-weight: 700;
 }
 
-/* 学生カードのスタイル */
 .obj-card {
-  background-color: white;
-  border: 1px solid #ddd;
-  border-radius: 8px;
-  margin: 10px;
-  padding: 15px;
-  text-align: center;
-  width: 150px;
-  transition: transform 0.2s;
+  position: relative;
+  border-radius: 12px;
+  margin: 15px;
+  width: 220px; /* 少し幅を広げます */
+  height: 300px; /* 高さを設定します */
+  transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  background-size: cover;
+  background-position: center;
+  color: white;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* コンテンツを下部に配置 */
+  text-align: left; /* テキストを左揃えに */
 }
 
-/* フッター */
-#footer {
-  /* padding: top 60px; コンテンツがフッターに被らないようにする */
-  text-align: center;
-  padding: 10px;
-  background-color: #fff3f3;
-  color: #333;
-  /* position: fixed; */
-  width: 100%;
+/* オーバーレイを追加 */
+.obj-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
   bottom: 0;
+  /* 下から上へのグラデーション */
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9) 25%,
+    rgba(0, 0, 0, 0) 60%
+  );
+  z-index: 1;
+  transition: background 0.3s;
 }
 
 .obj-card:hover {
-  transform: scale(1.05);
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
 }
 
-/* アイコンのスタイル */
+.obj-card:hover::before {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.95) 35%,
+    rgba(0, 0, 0, 0) 70%
+  );
+}
+
+.obj-card .card-content {
+  position: relative;
+  z-index: 2;
+  padding: 20px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .obj-icon {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
 }
 
-/* 名前のスタイル */
 .obj-name {
-  font-size: 1.2em;
-  margin: 10px 0;
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 0 0 10px 0;
+  color: #fff; /* 文字色を白に */
 }
 
-/* 一言コメントのスタイル */
 .obj-comment {
-  font-size: 0.9em;
-  color: white;
+  font-size: 1em;
+  color: #f0f0f0; /* 少し薄い白に */
+  margin: 0;
 }
 
 /* 詳細画面のスタイル */
 .detail-header {
   text-align: center;
-  background-color: #f8f9fa;
-  padding: 20px 0;
-  border-bottom: 1px solid #ddd;
+  background-color: #fff;
+  padding: 25px 0;
+  border-bottom: 1px solid #e0e0e0;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
 }
 
 .detail-title {
-  font-size: 1.8em;
+  font-size: 2.2em;
+  font-weight: 700;
   color: #333;
   margin: 0;
 }
 
 .detail-main {
-  padding: 20px;
+  padding: 30px 15px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-.detail-container {
+/* プロフィールセクション */
+.profile-section {
   text-align: center;
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 20px;
-  max-width: 400px;
-  width: 100%;
+  margin-bottom: 30px;
 }
 
-.detail-icon {
-  width: 120px;
-  height: 120px;
+.profile-icon {
+  width: 140px;
+  height: 140px;
   border-radius: 50%;
   object-fit: cover;
+  border: 4px solid #fff;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
   margin-bottom: 15px;
 }
 
-.detail-name {
-  font-size: 1.5em;
-  color: #333;
+.profile-name {
+  font-size: 2em;
+  font-weight: 700;
   margin: 10px 0;
 }
 
-.detail-comment {
-  font-size: 1em;
-  color: #555555;
-  margin: 0;
+.profile-comment {
+  font-size: 1.2em;
+  color: #555;
+  font-style: italic;
 }
 
+/* 画像カルーセル */
 .image-carousel {
   width: 100%;
-  max-width: 600px;
   margin: 20px 0;
 }
 
-.carousel-image {
-  height: 200px;
-  width: auto;
-  margin: 0 10px;
-  object-fit: cover;
-  border-radius: 8px;
+.carousel-container {
+  padding-bottom: 15px;
 }
 
-/* 戻るボタン */
-.btn-back {
-  margin-top: 20px;
-  padding: 10px 20px;
-  font-size: 1em;
-  color: #fff;
-  background-color: #007bff;
+.carousel-image {
+  height: 250px;
+  width: auto;
+  margin: 0 8px;
+  border-radius: 12px;
+  object-fit: cover;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  transition: transform 0.3s;
+}
+
+.carousel-image:hover {
+  transform: scale(1.03);
+}
+
+/* コンテンツカード */
+.content-cards {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 25px;
+  width: 100%;
+  margin: 30px 0;
+}
+
+.card {
+  background-color: #fff;
+  border-radius: 12px;
+  padding: 25px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+}
+
+.card h3 {
+  font-size: 1.6em;
+  font-weight: 700;
+  margin-top: 0;
+  margin-bottom: 15px;
+  color: #333;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 10px;
+}
+
+.card p {
+  font-size: 1.1em;
+  line-height: 1.8;
+  color: #444;
+  margin: 0;
+}
+
+/* アクションボタン */
+.actions {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.wiki-link, .btn-back {
+  padding: 12px 25px;
+  font-size: 1.1em;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
   border: none;
-  border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+}
+
+.wiki-link {
+  background-color: #5a67d8;
+  color: #fff;
+}
+
+.wiki-link:hover {
+  background-color: #434190;
+  transform: translateY(-2px);
+}
+
+.btn-back {
+  background-color: #e2e8f0;
+  color: #4a5568;
 }
 
 .btn-back:hover {
-  background-color: #0056b3;
+  background-color: #cbd5e0;
+  transform: translateY(-2px);
 }
 
-/* アニメーション: 文字のフェードインとスライド */
+/* アニメーション */
+.animate-text {
+  animation: fadeInSlideUp 1s ease forwards;
+  opacity: 0;
+}
+
 @keyframes fadeInSlideUp {
   0% {
     opacity: 0;
@@ -182,48 +293,30 @@ main {
   }
 }
 
-/* アニメーション: 画像の拡大 */
-@keyframes zoomIn {
-  0% {
-    transform: scale(0.9);
-    opacity: 0;
-  }
-  100% {
-    transform: scale(1);
-    opacity: 1;
-  }
-}
-
-/* 文字のアニメーション */
-.animate-text {
-  animation: fadeInSlideUp 1s ease forwards;
-  opacity: 0; /* 初期状態で非表示 */
-}
-
-/* 画像のアニメーション */
-.animate-image {
-  animation: zoomIn 1.5s ease forwards;
-  opacity: 0; /* 初期状態で非表示 */
-}
-
-/* アニメーションの遅延を設定 */
-.detail-title {
-  animation-delay: 0.2s;
-}
-
-.detail-name {
-  animation-delay: 0.4s;
-}
-
-.detail-comment {
-  animation-delay: 0.6s;
-}
-
-.detail-icon {
-  animation-delay: 0.2s;
-}
-
+/* 横スクロール */
 .horizontal_scroll {
   display: flex;
-  overflow-x: scroll;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.horizontal_scroll::-webkit-scrollbar {
+  height: 8px;
+}
+
+.horizontal_scroll::-webkit-scrollbar-track {
+  background: #f0f2f5;
+  border-radius: 10px;
+}
+
+.horizontal_scroll::-webkit-scrollbar-thumb {
+  background-color: #ccc;
+  border-radius: 10px;
+}
+
+/* レスポンシブ対応 */
+@media (min-width: 768px) {
+  .content-cards {
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  }
 }
