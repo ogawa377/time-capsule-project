@@ -2,7 +2,7 @@
 
 /* 全体のスタイル設定 */
 body {
-  font-family: 'Noto Sans JP', sans-serif;
+  font-family: "Noto Sans JP", sans-serif;
   margin: 0;
   padding: 0;
   background-color: #f0f2f5;
@@ -44,32 +44,62 @@ main {
 }
 
 .obj-card {
-  position: relative;
+  background-color: white;
+  border: 1px solid #e0e0e0;
   border-radius: 12px;
   margin: 15px;
-  width: 220px; /* 少し幅を広げます */
-  height: 300px; /* 高さを設定します */
+  width: 220px;
+  height: 300px;
   transition: transform 0.3s, box-shadow 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+  text-align: center;
+}
+
+.obj-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 20px rgba(0, 0, 0, 0.1);
+}
+
+.obj-name {
+  font-size: 1.4em;
+  font-weight: 700;
+  margin: 15px 0 10px 0;
+  color: #333;
+}
+
+.obj-comment {
+  font-size: 1em;
+  color: #555;
+  margin: 0;
+}
+
+/* 画像付きカードのスタイル */
+.obj-card.has-image {
+  position: relative;
+  color: white;
+  overflow: hidden;
+  justify-content: flex-end;
+  text-align: left;
+  padding: 0;
+  border: none;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
   background-size: cover;
   background-position: center;
-  color: white;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* コンテンツを下部に配置 */
-  text-align: left; /* テキストを左揃えに */
 }
 
-/* オーバーレイを追加 */
-.obj-card::before {
+.obj-card.has-image::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
   bottom: 0;
-  /* 下から上へのグラデーション */
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.9) 25%,
@@ -79,12 +109,12 @@ main {
   transition: background 0.3s;
 }
 
-.obj-card:hover {
+.obj-card.has-image:hover {
   transform: translateY(-5px);
   box-shadow: 0 12px 20px rgba(0, 0, 0, 0.25);
 }
 
-.obj-card:hover::before {
+.obj-card.has-image:hover::before {
   background: linear-gradient(
     to top,
     rgba(0, 0, 0, 0.95) 35%,
@@ -92,7 +122,7 @@ main {
   );
 }
 
-.obj-card .card-content {
+.obj-card.has-image .card-content {
   position: relative;
   z-index: 2;
   padding: 20px;
@@ -100,23 +130,13 @@ main {
   box-sizing: border-box;
 }
 
-.obj-icon {
-  width: 60px;
-  height: 60px;
-  border-radius: 50%;
-}
-
-.obj-name {
-  font-size: 1.4em;
-  font-weight: 700;
+.obj-card.has-image .obj-name {
+  color: #fff;
   margin: 0 0 10px 0;
-  color: #fff; /* 文字色を白に */
 }
 
-.obj-comment {
-  font-size: 1em;
-  color: #f0f0f0; /* 少し薄い白に */
-  margin: 0;
+.obj-card.has-image .obj-comment {
+  color: #f0f0f0;
 }
 
 /* 詳細画面のスタイル */
@@ -125,7 +145,7 @@ main {
   background-color: #fff;
   padding: 25px 0;
   border-bottom: 1px solid #e0e0e0;
-  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .detail-title {
@@ -156,7 +176,7 @@ main {
   border-radius: 50%;
   object-fit: cover;
   border: 4px solid #fff;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   margin-bottom: 15px;
 }
 
@@ -188,7 +208,7 @@ main {
   margin: 0 8px;
   border-radius: 12px;
   object-fit: cover;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s;
 }
 
@@ -209,13 +229,13 @@ main {
   background-color: #fff;
   border-radius: 12px;
   padding: 25px;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .card:hover {
   transform: translateY(-5px);
-  box-shadow: 0 12px 25px rgba(0,0,0,0.12);
+  box-shadow: 0 12px 25px rgba(0, 0, 0, 0.12);
 }
 
 .card h3 {
@@ -245,7 +265,8 @@ main {
   width: 100%;
 }
 
-.wiki-link, .btn-back {
+.wiki-link,
+.btn-back {
   padding: 12px 25px;
   font-size: 1.1em;
   font-weight: 700;

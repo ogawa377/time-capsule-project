@@ -8,6 +8,7 @@ document.addEventListener("DOMContentLoaded", function () {
       name: "ドナルド・トランプ",
       comment: "アメリカを取り戻す",
       icon: "../assets/images/user_icon/dnald/ttanp1.jpeg",
+      hasImage: true,
     },
     {
       id: 2,
@@ -253,7 +254,13 @@ document.addEventListener("DOMContentLoaded", function () {
   students.forEach((student) => {
     const studentCard = document.createElement("div");
     studentCard.classList.add("obj-card");
-    studentCard.style.backgroundImage = `url('${student.icon}')`;
+
+    // 画像がある場合のみ背景画像と専用クラスを設定
+    if (student.hasImage) {
+      studentCard.classList.add("has-image");
+      studentCard.style.backgroundImage = `url('${student.icon}')`;
+    }
+
     studentCard.innerHTML = `
       <div class="card-content">
         <h3 class="obj-name">${student.name}</h3>
