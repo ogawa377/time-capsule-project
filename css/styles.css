@@ -139,6 +139,20 @@ main {
   margin: 0;
 }
 
+.image-carousel {
+  width: 100%;
+  max-width: 600px;
+  margin: 20px 0;
+}
+
+.carousel-image {
+  height: 200px;
+  width: auto;
+  margin: 0 10px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
 /* 戻るボタン */
 .btn-back {
   margin-top: 20px;
@@ -207,4 +221,9 @@ main {
 
 .detail-icon {
   animation-delay: 0.2s;
+}
+
+.horizontal_scroll {
+  display: flex;
+  overflow-x: scroll;
 }
