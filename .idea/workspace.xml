@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="635899f6-cc9d-4edd-9a0f-23cbc99dca80" name="Changes" comment="init">
-      <change beforePath="$PROJECT_DIR$/html/sts/ドナルド・トランプ/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/sts/ドナルド・トランプ/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/js/main.js" beforeDir="false" afterPath="$PROJECT_DIR$/js/main.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/めも/自己紹介fAKE.HTML" beforeDir="false" afterPath="$PROJECT_DIR$/めも/自己紹介fAKE.HTML" afterDir="false" />
-    </list>
+    <list default="true" id="635899f6-cc9d-4edd-9a0f-23cbc99dca80" name="Changes" comment="init" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -19,10 +15,11 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
-  <component name="ProjectColorInfo">{
-  &quot;associatedIndex&quot;: 2
-}</component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
   <component name="ProjectId" id="32vMy1TVk7C85TJWjfGJ6Obajy1" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
@@ -35,7 +32,6 @@
   "keyToString": {
     "ModuleVcsDetector.initialDetectionPerformed": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager": "true",
     "RunOnceActivity.cidr.known.project.marker": "true",
     "RunOnceActivity.git.unshallow": "true",
     "RunOnceActivity.readMode.enableVisualFormatting": "true",
