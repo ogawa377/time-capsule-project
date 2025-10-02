@@ -1,21 +1,23 @@
 // main.js
-
 document.addEventListener("DOMContentLoaded", function () {
   /// Userデータ配列
   const students = [
     {
       id: 1,
+      name: "kimJohnu",
+      comment: "南北統一",
+      icon: "../assets/images/user_icon/kimJohnu/masao4.jpeg",
+      hasImage: true,
+    },
+
+    {
+      id: 2,
       name: "ドナルド・トランプ",
       comment: "アメリカを取り戻す",
       icon: "../assets/images/user_icon/dnald/ttanp1.jpeg",
       hasImage: true,
     },
-    {
-      id: 2,
-      name: "佐藤花子",
-      comment: "プログラミングが大好き",
-      icon: "icons/student2.svg",
-    },
+
     {
       id: 3,
       name: "石破しげる",
@@ -270,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     studentCard.addEventListener("click", () => {
       // 各ユーザーのフォルダに遷移
-      const userFolder = encodeURIComponent(student.name.replace(/\s+/g, "_")); // スペース:アンダースコアに変換
+      const userFolder = student.name.replace(/\s+/g, "_"); // スペース:アンダースコアに変換
       window.location.href = `sts/${userFolder}/detail.html`;
     });
 
