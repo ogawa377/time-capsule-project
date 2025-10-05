@@ -39,11 +39,18 @@ main {
   justify-content: center;
   padding: 20px;
 }
-
+header {
+  background-image: url("../assets/images/user_icon/dnald/man1.svg");
+  text-align: center;
+  background-color: #fff;
+  padding: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+  border-bottom: 1px solid #e0e0e0;
+}
 #index-title {
   text-align: center;
   margin: 20px 0;
-  font-size: 2.5em;
+  font-size: 3.5em;
   font-weight: 700;
 }
 
