@@ -5,9 +5,9 @@ document.addEventListener("DOMContentLoaded", function () {
   const students = [
     {
       id: 1,
-      name: "ドナルド・トランプ",
-      comment: "アメリカを取り戻す",
-      icon: "../assets/images/user_icon/dnald/ttanp1.jpeg",
+      name: "きょうへい",
+      comment: "前回の授業の感想を教えてね🦒",
+      icon: "../assets/images/ニワトリ.jpg",
       hasImage: true,
     },
     {

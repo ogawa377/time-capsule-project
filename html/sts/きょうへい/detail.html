@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../../../css/styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>学習 - サンプル</title>
+  </head>
+  <body>
+    <header class="detail-header">
+      <h1 class="detail-title animate-text">サンプル画面です。</h1>
+    </header>
+
+    <main class="detail-main">
+      <section id="profile" class="profile-section">
+        <img
+          src="../../../assets/images/ニワトリ.jpg"
+          alt="Mactuve"
+          class="profile-icon"
+        />
+        <h2 class="profile-name">K.O</h2>
+        <p class="profile-comment">前回はwebについて話をしました。</p>
+      </section>
+
+      <section class="image-carousel">
+        <div
+          class="carousel-container horizontal_scroll"
+          id="carousel-container"
+        >
+          <!-- JavaScriptで画像を挿入 -->
+        </div>
+      </section>
+
+      <div class="content-cards">
+        <div class="card">
+          <h3>将来の夢</h3>
+          <p>
+            皆には立派な大人になってほしいです、嫌な想い、悲しい想い、つまらない人生にしてほしくないし、誰かを傷つけるような事はせず、楽しい人生を送って欲しいという思いで毎回授業をさせてもらいます。時にはつまらない話、わかりにくい話もしなくちゃいけません、理解するには時間も掛かると思いますが、君らに面白いと思ってもらえる様に頑張ります。一緒に学べる時間は限りがありますが、大きく立派になる君らを見てみたいです!
+          </p>
+        </div>
+        <div class="card">
+          <h3>現在・未来</h3>
+          <p>
+            現在はネイティブアプリを設計したり、実装したり、直したりという事を中心にしています、僕もまだまだ学ばなければならない事がたくさんあります、出会った人々と楽しく、面白い時間を過ごしたいです。
+          </p>
+        </div>
+        <div class="card">
+          <h3>過去</h3>
+          <p>
+            プログラマになる為に最初は大変な思いをしました、分からない事だらけで、一つづつ興味を持って学びました、培った知識や技術を人々の役に立てたいと思い始めました、そして今回、皆と出会い、一緒に学ぶ機会を得ました。
+            <!-- <a
+              href="https://truthsocial.com/@realDonaldTrump"
+              target="_blank"
+              class="link-sample"
+              >truthsocial
+            </a> -->
+          </p>
+        </div>
+      </div>
+
+      <div class="actions">
+        <!-- <a href="" target="_blank" class="wiki-link">Wikipediaで詳しく知る</a> -->
+        <button class="btn-back bounce" onclick="goBack()">戻る</button>
+      </div>
+    </main>
+
+    <script>
+      function goBack() {
+        window.history.back();
+      }
+
+      // 横スクロール画像の表示（デバッグログとエラーハンドリング追加）
+      document.addEventListener("DOMContentLoaded", () => {
+        const imageFolder = "../../../assets/images/user_icon/kei/";
+        const imageFiles = [
+          "notice1.jpg",
+          "notice2.jpg",
+          "notice3.jpg",
+          "notice4.jpg",
+          "cs.jpg",
+          "js.jpg",
+        ]; // 画像ファイル名をリスト化
+        const carouselContainer = document.getElementById("carousel-container");
+
+        console.log("[carousel] imageFolder:", imageFolder);
+        console.log("[carousel] imageFiles:", imageFiles);
+
+        if (!carouselContainer) {
+          console.error("[carousel] carousel-container element not found");
+          return;
+        }
+
+        imageFiles.forEach((fileName) => {
+          const img = document.createElement("img");
+          // スラッシュに注意して結合
+          img.src = imageFolder + fileName;
+          img.alt = "IMAGES";
+          img.classList.add("carousel-image", "hover-zoom");
+
+          img.onerror = () => {
+            console.error("[carousel] failed to load image:", img.src);
+          };
+          img.onload = () => {
+            console.log("[carousel] loaded image:", img.src);
+          };
+
+          carouselContainer.appendChild(img);
+        });
+      });
+    </script>
+  </body>
+</html>
