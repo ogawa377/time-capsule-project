@@ -352,3 +352,23 @@ header {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   }
 }
+
+/* Falling Ball Animation */
+.falling-ball {
+  position: fixed; /* Use fixed position to be relative to the viewport */
+  top: -150px; /* Start above the screen (adjusted for new size) */
+  /* left is now set by JS for randomness */
+  width: 150px; /* Increased size */
+  height: 150px; /* Increased size */
+  animation: fall 5s linear forwards; /* Slower and constant speed */
+  z-index: 9999; /* Ensure it's on top */
+}
+
+@keyframes fall {
+  0% {
+    transform: translateY(0) rotate(0);
+  }
+  100% {
+    transform: translateY(calc(100vh + 150px)) rotate(720deg); /* Fall past the bottom and rotate more */
+  }
+}
