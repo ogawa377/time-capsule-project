@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // スペース:アンダースコアに変換し、URLエンコード
       const userFolder = encodeURIComponent(student.name.replace(/\s+/g, "_"));
       // タップ時の画面遷移処理
-      window.location.href = `time-capsule-project/html/sts/${userFolder}/detail.html`;
+      window.location.href = `/html/sts/${userFolder}/detail.html`;
     });
 
     studentContainer.appendChild(studentCard);
