@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
       id: 1,
       name: "きょうへい",
       comment: "前回の授業の感想を教えてね🦒",
-      icon: "../assets/images/ニワトリ.jpg",
+      icon: "./assets/images/ニワトリ.jpg",
       hasImage: true,
     },
     {
@@ -272,7 +272,7 @@ document.addEventListener("DOMContentLoaded", function () {
       // スペース:アンダースコアに変換し、URLエンコード
       const userFolder = encodeURIComponent(student.name.replace(/\s+/g, "_"));
       // タップ時の画面遷移処理
-      window.location.href = `./html/sts/${userFolder}/detail.html`;
+      window.location.href = `time-capsule-project/html/sts/${userFolder}/detail.html`;
     });
 
     studentContainer.appendChild(studentCard);
