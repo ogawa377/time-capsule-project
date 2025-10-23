@@ -269,8 +269,9 @@ document.addEventListener("DOMContentLoaded", function () {
     `;
 
     studentCard.addEventListener("click", () => {
-      // 各ユーザーのフォルダに遷移
-      const userFolder = encodeURIComponent(student.name.replace(/\s+/g, "_")); // スペース:アンダースコアに変換
+      // スペース:アンダースコアに変換し、URLエンコード
+      const userFolder = encodeURIComponent(student.name.replace(/\s+/g, "_"));
+      // タップ時の画面遷移処理
       window.location.href = `sts/${userFolder}/detail.html`;
     });
 
