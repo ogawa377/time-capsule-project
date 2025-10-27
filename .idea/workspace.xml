@@ -4,9 +4,8 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="635899f6-cc9d-4edd-9a0f-23cbc99dca80" name="Changes" comment="init">
-      <change beforePath="$PROJECT_DIR$/css/styles.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/styles.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/html/sts/きょうへい/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/html/sts/きょうへい/detail.html" afterDir="false" />
+    <list default="true" id="635899f6-cc9d-4edd-9a0f-23cbc99dca80" name="Changes" comment="サッカーボール落下アニメ実装#2">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -17,6 +16,11 @@
     <option name="formatViaClangd" value="false" />
   </component>
   <component name="Git.Settings">
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="UPDATE_TYPE" value="REBASE" />
   </component>
@@ -79,7 +83,23 @@
       <option name="project" value="LOCAL" />
       <updated>1758298362287</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="サッカーボール落下アニメ実装">
+      <option name="closed" value="true" />
+      <created>1761208130082</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1761208130082</updated>
+    </task>
+    <task id="LOCAL-00005" summary="サッカーボール落下アニメ実装#2">
+      <option name="closed" value="true" />
+      <created>1761208546412</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1761208546412</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -96,6 +116,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="init#2" />
     <MESSAGE value="init" />
-    <option name="LAST_COMMIT_MESSAGE" value="init" />
+    <MESSAGE value="サッカーボール落下アニメ実装" />
+    <MESSAGE value="サッカーボール落下アニメ実装#2" />
+    <option name="LAST_COMMIT_MESSAGE" value="サッカーボール落下アニメ実装#2" />
   </component>
 </project>
